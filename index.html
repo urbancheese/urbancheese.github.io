@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website of urbancheese, a passionate coder with a focus on web development and cybersecurity.">
-    <meta name="keywords" content="urbancheese, Web Development, Cybersecurity, Portfolio">
+    <meta name="description" content="Portfolio website of urbancheese, a passionate coder with a focus on cybersecurity and web development.">
+    <meta name="keywords" content="urbancheese, Web Development, Cybersecurity, Portfolio, OSINT, Kali Linux">
     <meta name="author" content="urbancheese">
+    <meta property="og:title" content="Urbancheese Portfolio">
+    <meta property="og:description" content="Explore my web development and cybersecurity projects, including OSINT tools and Kali Linux expertise.">
+    <meta property="og:image" content="link-to-preview-image.jpg">
     <title>Urbancheese's Portfolio</title>
     <style>
         /* General Styling */
@@ -53,8 +56,8 @@
         }
 
         p {
-            font-size: 1em;
-            line-height: 1.6;
+            font-size: 1.1em;
+            line-height: 1.8;
         }
 
         @media (max-width: 768px) {
@@ -67,7 +70,7 @@
             }
 
             p {
-                font-size: 0.9em;
+                font-size: 1em;
             }
 
             .container {
@@ -99,6 +102,11 @@
             background-color: #0056b3;
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Active Link Highlighting */
+        nav a.active {
+            background-color: #0056b3;
         }
 
         /* Dark Mode for Navigation Bar */
@@ -151,7 +159,7 @@
         }
 
         body.dark-mode .project-card h3 {
-            color: #f5f5f5;
+            color: #f7a205;
         }
 
         body.dark-mode .project-card p {
@@ -164,7 +172,7 @@
 
         /* Dark Mode Toggle Switch */
         .dark-mode-toggle {
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
             display: flex;
@@ -241,54 +249,66 @@
 
 <body>
     <header>
-        <h1>urbancheese's Portfolio</h1>
+        <h1>Urbancheese's Portfolio</h1>
         <div class="dark-mode-toggle">
             <label for="darkModeToggle">Dark Mode</label>
             <input type="checkbox" id="darkModeToggle">
         </div>
     </header>
     <nav>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#current-project" class="nav-link">Current Project</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#about" class="nav-link" aria-label="About Me Section">About</a>
+        <a href="#current-project" class="nav-link" aria-label="Current Project Section">Current Project</a>
+        <a href="#projects" class="nav-link" aria-label="Projects Section">Projects</a>
+        <a href="#contact" class="nav-link" aria-label="Contact Section">Contact</a>
+        <a href="#home" class="nav-link" aria-label="Home Section">Home</a>
     </nav>
     <div class="container">
         <section id="about" class="section" role="region">
             <h2>About Me</h2>
-            <p>Hello! I'm urbancheese, a passionate coder with a focus on web development and cybersecurity. I enjoy working on projects that push my boundaries and allow me to learn new things.</p>
+            <p>Hello! I'm urbancheese, a passionate coder specializing in OSINT tools, web development, and cybersecurity. I use Kali Linux as my primary OS for cybersecurity tasks. I enjoy working on projects that push my boundaries and allow me to learn new things.</p>
         </section>
 
         <section id="current-project" class="section" role="region">
             <h2>Current Project</h2>
             <div class="project-card">
                 <h3>Java Educational Malware</h3>
-                <p>This project involves creating educational malware using Java. It aims to demonstrate the potential vulnerabilities in systems and how to mitigate them.</p>
+                <p>This project involves creating educational malware using Java. It aims to demonstrate potential vulnerabilities in systems and how to mitigate them. The goal is to show how simple vulnerabilities can be exploited and provide mitigation strategies to enhance system security.</p>
             </div>
         </section>
 
         <section id="projects" class="section" role="region">
             <h2>Projects</h2>
             <div class="project-card">
-                <h3>Project 1</h3>
-                <p>An educational ransomware guide.</p>
+                <h3>Educational Ransomware Guide</h3>
+                <p>In this guide, I explore how ransomware operates, covering the stages of encryption, payload delivery, and attack.</p>
                 <a href="https://github.com/urbancheese/Ransomeware" target="_blank" rel="noopener noreferrer">View on GitHub</a>
             </div>
             <div class="project-card">
-                <h3>Project 2</h3>
-                <p>An educational Roblox ESP script.</p>
+                <h3>Roblox ESP Script</h3>
+                <p>This educational script demonstrates how ESP (Extra Sensory Perception) techniques work in Roblox for ethical hacking purposes. The project highlights the challenges faced in identifying and visualizing in-game objects. Technologies used: Lua, Roblox API.</p>
                 <a href="https://github.com/urbancheese/ROBLOX-ESP" target="_blank" rel="noopener noreferrer">View on GitHub</a>
             </div>
             <div class="project-card">
-                <h3>Project 3</h3>
-                <p>Discord network info for educational purposes.</p>
+                <h3>Discord Network Info</h3>
+                <p>This project gathers the target wifi names for educational purposes..</p>
                 <a href="https://github.com/urbancheese/ip-config-discord" target="_blank" rel="noopener noreferrer">View on GitHub</a>
             </div>
         </section>
-        
+
         <section id="contact" class="section" role="region">
             <h2>Contact</h2>
             <p>If you would like to get in touch, feel free to <a href="mailto:averagecwplayer@gmail.com">send me an email</a>.</p>
+        </section>
+
+        <section id="blog" class="section" role="region">
+            <h2>Blog</h2>
+            <p>Stay tuned for updates about my current projects, cybersecurity tips, and web development insights. This section will be updated regularly with new content.</p>
+        </section>
+
+        <section id="testimonials" class="section" role="region">
+            <h2>Testimonials</h2>
+            <p>"Urbancheese has coded for me and my friends and have always got us an A." - Anonymous</p>
+            <p>"Skibidi" - Exploit Developer</p>
         </section>
     </div>
 
@@ -303,7 +323,7 @@
             toggleSwitch.checked = true;
         }
 
-        // Toggle dark mode
+        // dark mode
         toggleSwitch.addEventListener('change', () => {
             body.classList.toggle('dark-mode');
             if (body.classList.contains('dark-mode')) {
@@ -313,10 +333,13 @@
             }
         });
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        // smooth scroll
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
                 e.preventDefault();
+                navLinks.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
                 const targetId = this.getAttribute('href').substring(1);
                 document.getElementById(targetId).scrollIntoView({
                     behavior: 'smooth'
